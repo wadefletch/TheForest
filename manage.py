@@ -10,6 +10,7 @@ manager = Manager(app)
 
 
 def make_shell_context():
+    # creates shell in app context (useful for db debugging)
     return dict(app=app, db=db)
 
 
