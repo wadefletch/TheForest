@@ -6,7 +6,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'shh! it\'s a secret!'
     COLOR = 'blue'
-    NAME = '[[ INSERT NAME ]]'
+    NAME = 'The Forest'
     SQLALCHEMY_TRACK_MODIFICATIONS = True
 
     @staticmethod
