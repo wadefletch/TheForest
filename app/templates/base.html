@@ -22,11 +22,7 @@
     {% endblock %}
 </head>
 <body>
-<div id="site-header">{{ config['NAME'] }}</div>
-<nav class="ui {{ config['COLOR'] }} menu">
-    {{ nav_link("main.page1", "Page 1") }}
-    {{ nav_link("main.page2", "Page 2") }}
-</nav>
+<h1 id="ui header">{{ config['NAME'] }}</h1>
 {% with messages = get_flashed_messages() %}
 {% if messages %}
 {% for message in messages %}
