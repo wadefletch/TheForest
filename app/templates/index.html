@@ -3,15 +3,17 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<div class="ui grid">
-    <div id="actions" class="three wide column">
-        actions
-    </div>
-    <div id="events" class="three wide column">
-        events
-    </div>
-    <div id="inventory" class="three wide column">
-        inventory
-    </div>
-</div>
+<table id="main-table">
+    <tr>
+        <th id="actions">
+            <h2>Actions</h2>
+        </th>
+        <th id="events">
+            <h2>Events</h2>
+        </th>
+        <th id="inventory">
+            <h2>Inventory</h2>
+        </th>
+    </tr>
+</table>
 {% endblock %}

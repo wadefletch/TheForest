@@ -14,13 +14,24 @@ footer {
     padding-bottom: 10px;
 }
 
-#site-header {
-    text-align: center;
-    font-size: 60px;
+#actions, #events, #inventory {
+    /*border: 3px solid white;*/
     padding: 20px;
-    font-family: 'Open Sans', sans-serif;
+    text-align: left;
 }
 
-#center-align {
-    text-align: center;
+#actions {
+    width: 25%;
+}
+
+#events {
+    width: 45%;
+}
+
+#inventory {
+    width: 30%;
+}
+
+#main-table {
+    width: 100%;
 }

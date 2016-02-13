@@ -1,11 +1,11 @@
 from flask import Flask
-from flask.ext.sqlalchemy import SQLAlchemy
+from flask.ext.mongoalchemy import MongoAlchemy
 from flask_compress import Compress
 
 from config import config
 
 compress = Compress()
-db = SQLAlchemy()
+db = MongoAlchemy()
 
 
 def create_app(config_name):

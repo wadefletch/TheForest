@@ -3,7 +3,7 @@ import os
 
 from flask.ext.script import Manager, Shell
 
-from app import create_app, db
+from app import create_app
 
 app = create_app(os.environ.get('FLASK_CONFIG') or 'default')
 manager = Manager(app)
