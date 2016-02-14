@@ -1,9 +1,19 @@
 {% from "macros.html" import inventory_item %}
 
-{{ inventory_item(user, 'wood') }}
-{{ inventory_item(user, 'stone') }}
-{{ inventory_item(user, 'flint') }}
-{{ inventory_item(user, 'hatchets') }}
-{{ inventory_item(user, 'weeds') }}
-{{ inventory_item(user, 'furs') }}
-{{ inventory_item(user, 'knives') }}
+<table class="ui very basic collapsing celled table">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Item</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{ inventory_item(user, 'wood') }}
+    {{ inventory_item(user, 'stone') }}
+    {{ inventory_item(user, 'flint') }}
+    {{ inventory_item(user, 'hatchets') }}
+    {{ inventory_item(user, 'weeds') }}
+    {{ inventory_item(user, 'furs') }}
+    {{ inventory_item(user, 'knives') }}
+    </tbody>
+</table>

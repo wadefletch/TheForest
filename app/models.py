@@ -20,6 +20,8 @@ class User(db.Document):
     Start_Fire = db.BoolField(required=False, default=False)
     Harvest_Apples = db.BoolField(required=False, default=False)
 
+    fires = db.IntField(required=False, default=0)
+
     def log_event(self, event):
         self.event_stream = [event] + self.event_stream
         self.save()

@@ -10,7 +10,14 @@
 
 {% macro inventory_item(user, name) %}
 {% if user[name] > 0 %}
-<span>{{ user[name] }}&emsp;{{ name|title }}</span><br>
+<tr>
+    <td>
+        {{ user[name] }}
+    </td>
+    <td>
+        {{ name|title }}
+    </td>
+</tr>
 {% endif %}
 {% endmacro %}
 

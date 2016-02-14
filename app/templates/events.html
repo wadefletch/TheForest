@@ -1,5 +1,5 @@
 <div class="ui relaxed divided list">
     {% for event in events[:6] %}
-    <div class="item">{{ event }}</div>
+    <div class="item">{{ event|safe }}</div>
     {% endfor %}
 </div>
