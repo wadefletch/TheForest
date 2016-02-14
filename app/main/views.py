@@ -50,7 +50,7 @@ def _get_action(id):
         u.log_event('You wander into the woods.')
     elif id == 'Get_Wood':
         r = radint(0, 10);
-        u.wood += ()
+        u.wood += (
     elif id == 'Explore':
         pass
     elif id == 'Find_Stone':
