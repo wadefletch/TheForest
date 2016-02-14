@@ -1,4 +1,4 @@
-from random import choice
+from random import choice, randint
 from string import ascii_uppercase
 
 from flask import render_template, redirect, url_for, make_response, request
@@ -46,19 +46,23 @@ def _inventory():
 @main.route('/_get_action/<id>')
 def _get_action(id):
     u = User.query.filter(User.id == request.cookies.get('user_id')).first_or_404()
-    if id == 'Wander':
-        u.log_event('You wander into the woods.')
-    elif id == 'Get_Wood':
-        r = radint(0, 10);
-        u.wood += (
+
+    if id == 'Get_Wood':
+        r = randint(0, 10);
+        u.wood += r
+        u.unlock('Find_Flint')
+        r <= 2
+    elif id == 'Find_Flint'
+        r = randint(0, 5)
+        u.flint += r
     elif id == 'Explore':
-        pass
+
     elif id == 'Find_Stone':
-        pass
-    elif id == 'Find_Flint':
-        pass
+        r = randint(0, 5)
+        u.stone += r
     elif id == 'Start_Fire':
-        pass
+
     elif id == 'Harvest_Apples':
-        pass
+        r = randint(1, 7)
+        u.apple += r
     return ''
