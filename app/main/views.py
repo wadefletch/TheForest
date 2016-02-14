@@ -2,7 +2,6 @@ from random import choice
 from string import ascii_uppercase
 
 from flask import render_template, redirect, url_for, make_response, request
-
 from . import main
 from ..models import User
 
@@ -50,15 +49,16 @@ def _get_action(id):
     if id == 'Wander':
         u.log_event('You wander into the woods.')
     elif id == 'Get_Wood':
-
+        r = radint(0, 10);
+        u.wood += ()
     elif id == 'Explore':
-
+        pass
     elif id == 'Find_Stone':
-
+        pass
     elif id == 'Find_Flint':
-
+        pass
     elif id == 'Start_Fire':
-
+        pass
     elif id == 'Harvest_Apples':
-
+        pass
     return ''
