@@ -19,7 +19,7 @@ def before_request():
 
 @main.route('/')
 def index():
-    return render_template('index.html')
+    return redirect(url_for('main.play'))
 
 
 @main.route('/about')
