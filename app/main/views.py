@@ -36,6 +36,7 @@ def _inventory():
 @main.route('/_actions')
 def _actions():
     u = User.query.filter(User.id == request.cookies.get('user_id')).first_or_404()
-    u.log_event('test event')
-    print u.events
+    u.event_stream = 'Test event' + u.event_stream
+    u.save()
+    print u.event_stream
     return render_template('actions.html', user=u)

@@ -3,6 +3,7 @@ from app import db
 
 class User(db.Document):
     id = db.StringField()
+    event_stream = db.StringField()
 
     wood = db.IntField(required=False, default=0)
     stone = db.IntField(required=False, default=0)
@@ -20,7 +21,6 @@ class User(db.Document):
     Start_Fire = db.BoolField(required=False, default=False)
     Harvest_Apples = db.BoolField(required=False, default=False)
 
-    events = db.ListField(db.StringField(), required=False)
 
     def log_event(self, event):
-        self.events = event + self.events
+        self.event_stream = event + self.event_stream
