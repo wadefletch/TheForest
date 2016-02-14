@@ -10,12 +10,12 @@
 
 {% macro inventory_item(user, name) %}
 {% if user[name] > 0 %}
-{{ user[name] }}&emsp;{{ name|title }}<br>
+<span>{{ user[name] }}&emsp;{{ name|title }}</span><br>
 {% endif %}
 {% endmacro %}
 
-{% macro action(user) %}
-{% if user[name]==False %}
-<button class="ui button">{{ user[name]|replace('_', ' ') }}</button>
+{% macro action(user, name) %}
+{% if user[name]==True %}
+<button style='margin:10px;' class="ui button" onClick="socket.send('name');">{{ name|replace('_', ' ') }}</button>
 {% endif %}
 {% endmacro %}

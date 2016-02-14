@@ -1,6 +1,6 @@
 from flask import Flask
+from flask.ext.compress import Compress
 from flask.ext.mongoalchemy import MongoAlchemy
-from flask_compress import Compress
 
 from config import config
 

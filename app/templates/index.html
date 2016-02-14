@@ -1,32 +1,21 @@
 {% extends 'base.html' %}
-{% from 'macros.html' import inventory_item %}
+{% from 'macros.html' import inventory_item, action %}
 
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<div id="main-grid" class="ui grid">
-    <div id="actions" class="five wide column">
-        <div class="ui segment">
-            <h2 class="ui header">Actions</h2>
-
-        </div>
+<div class="ui horizontal segments">
+    <div id="actions" class="ui padded segment">
+        <h2 class="ui header">Actions</h2>
+        <div id="actions-frame"></div>
     </div>
-    <div id="events" class="five wide column">
-        <div class="ui segment">
-            <h2 class="ui header">Events</h2>
-        </div>
+    <div id="events" class="ui padded segment">
+        <h2 class="ui header">Events</h2>
+        <div id="events-frame"></div>
     </div>
-    <div id="inventory" class="five wide column">
-        <div class="ui segment">
-            <h2 class="ui header">Inventory</h2>
-            {{ inventory_item(user, 'wood') }}
-            {{ inventory_item(user, 'stone') }}
-            {{ inventory_item(user, 'flint') }}
-            {{ inventory_item(user, 'hatchets') }}
-            {{ inventory_item(user, 'weeds') }}
-            {{ inventory_item(user, 'furs') }}
-            {{ inventory_item(user, 'knives') }}
-        </div>
+    <div id="inventory" class="ui padded segment">
+        <h2 class="ui header">Inventory</h2>
+        <div id="inventory-frame"></div>
     </div>
 </div>
 {% endblock %}
