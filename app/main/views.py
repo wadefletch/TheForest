@@ -49,4 +49,16 @@ def _get_action(id):
     u = User.query.filter(User.id == request.cookies.get('user_id')).first_or_404()
     if id == 'Wander':
         u.log_event('You wander into the woods.')
+    elif id == 'Get_Wood':
+
+    elif id == 'Explore':
+
+    elif id == 'Find_Stone':
+
+    elif id == 'Find_Flint':
+
+    elif id == 'Start_Fire':
+
+    elif id == 'Harvest_Apples':
+
     return ''
