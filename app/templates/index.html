@@ -4,22 +4,21 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<table id="main-table">
-    <tr>
-        <th class="actions">
-            <h2>Actions</h2>
-        </th>
-        <th class="events">
-            <h2>Events</h2>
-        </th>
-        <th class="inventory">
-            <h2>Inventory</h2>
-        </th>
-    </tr>
-    <tr>
-        <td class="actions"></td>
-        <td class="events"></td>
-        <td class="inventory">
+<div id="main-grid" class="ui grid">
+    <div id="actions" class="five wide column">
+        <div class="ui segment">
+            <h2 class="ui header">Actions</h2>
+
+        </div>
+    </div>
+    <div id="events" class="five wide column">
+        <div class="ui segment">
+            <h2 class="ui header">Events</h2>
+        </div>
+    </div>
+    <div id="inventory" class="five wide column">
+        <div class="ui segment">
+            <h2 class="ui header">Inventory</h2>
             {{ inventory_item(user, 'wood') }}
             {{ inventory_item(user, 'stone') }}
             {{ inventory_item(user, 'flint') }}
@@ -27,7 +26,7 @@
             {{ inventory_item(user, 'weeds') }}
             {{ inventory_item(user, 'furs') }}
             {{ inventory_item(user, 'knives') }}
-        </td>
-    </tr>
-</table>
+        </div>
+    </div>
+</div>
 {% endblock %}

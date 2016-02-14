@@ -3,14 +3,12 @@ html, body {
     width: 90%;
     margin: 0 auto;
     margin-top: 10px;
-    color: white;
-    background-color: #303030;
 }
 
 footer {
     font-size: 12px;
     text-align: center;
-    color: #B8B8B8;
+    color: #A8A8A8;
     padding-bottom: 10px;
 }
 
@@ -32,6 +30,6 @@ footer {
     width: 30%;
 }
 
-#main-table {
+#main-grid {
     width: 100%;
 }

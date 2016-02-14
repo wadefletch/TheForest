@@ -13,3 +13,9 @@
 {{ user[name] }}&emsp;{{ name|title }}<br>
 {% endif %}
 {% endmacro %}
+
+{% macro action(user) %}
+{% if user[name]==False %}
+<button class="ui button">{{ user[name]|replace('_', ' ') }}</button>
+{% endif %}
+{% endmacro %}
