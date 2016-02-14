@@ -14,21 +14,21 @@ footer {
     padding-bottom: 10px;
 }
 
-#actions, #events, #inventory {
+.actions, .events, .inventory {
     /*border: 3px solid white;*/
-    padding: 20px;
+    padding: 5px 20px 0px 20px;
     text-align: left;
 }
 
-#actions {
+.actions {
     width: 25%;
 }
 
-#events {
+.events {
     width: 45%;
 }
 
-#inventory {
+.inventory {
     width: 30%;
 }
 

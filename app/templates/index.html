@@ -5,15 +5,28 @@
 {% block content %}
 <table id="main-table">
     <tr>
-        <th id="actions">
+        <th class="actions">
             <h2>Actions</h2>
         </th>
-        <th id="events">
+        <th class="events">
             <h2>Events</h2>
         </th>
-        <th id="inventory">
+        <th class="inventory">
             <h2>Inventory</h2>
         </th>
+    </tr>
+    <tr>
+        <td class="actions"></td>
+        <td class="events"></td>
+        <td class="inventory">
+            {{ user.wood }} &emsp;Wood<br>
+            {{ user.stone }} &emsp;Stone<br>
+            {{ user.flint }} &emsp;Flint<br>
+            {{ user.hatchets }} &emsp;Hatchet<br>
+            {{ user.weeds }} &emsp;Weeds<br>
+            {{ user.furs }} &emsp;Furs<br>
+            {{ user.knives }} &emsp;Knives<br>
+        </td>
     </tr>
 </table>
 {% endblock %}

@@ -8,7 +8,7 @@ class Config:
     COLOR = 'blue'
     NAME = 'The Forest'
     MONGOALCHEMY_DATABASE = 'heroku_d09c40b5'
-    MONGOALCHEMY_CONNECTION_STRING = 'mongodb://heroku_d09c40b5:eic1n4n5hhhrj2ua2ppkrfq0i6@ds061375.mongolab.com:61375/heroku_d09c40b5'
+    MONGOALCHEMY_CONNECTION_STRING = os.eviron.get('MONGOLAB_URI')
 
     @staticmethod
     def init_app(app):
