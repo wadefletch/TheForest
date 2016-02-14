@@ -13,6 +13,8 @@ def create_app(config_name):
     app.config.from_object(config[config_name])
     config[config_name].init_app(app)
 
+    app.jinja_env.globals.update(getattr=getattr)
+
     db.init_app(app)
     compress.init_app(app)
 

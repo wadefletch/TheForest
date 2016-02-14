@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% from 'macros.html' import inventory_item %}
 
 {% block title %}Home{% endblock %}
 
@@ -19,13 +20,13 @@
         <td class="actions"></td>
         <td class="events"></td>
         <td class="inventory">
-            {{ user.wood }} &emsp;Wood<br>
-            {{ user.stone }} &emsp;Stone<br>
-            {{ user.flint }} &emsp;Flint<br>
-            {{ user.hatchets }} &emsp;Hatchet<br>
-            {{ user.weeds }} &emsp;Weeds<br>
-            {{ user.furs }} &emsp;Furs<br>
-            {{ user.knives }} &emsp;Knives<br>
+            {{ inventory_item(user, 'wood') }}
+            {{ inventory_item(user, 'stone') }}
+            {{ inventory_item(user, 'flint') }}
+            {{ inventory_item(user, 'hatchets') }}
+            {{ inventory_item(user, 'weeds') }}
+            {{ inventory_item(user, 'furs') }}
+            {{ inventory_item(user, 'knives') }}
         </td>
     </tr>
 </table>

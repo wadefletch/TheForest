@@ -7,3 +7,9 @@
 {% endif -%}
 {% endif -%}
 {% endmacro %}
+
+{% macro inventory_item(user, name) %}
+{% if user[name] > 0 %}
+{{ user[name] }}&emsp;{{ name|title }}<br>
+{% endif %}
+{% endmacro %}
