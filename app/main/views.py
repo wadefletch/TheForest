@@ -83,7 +83,12 @@ def _get_action(id):
     elif id == 'Find_Stone':
         r1 = randint(0, 10)
         u.stone += r1
-        u.log_event('You gather some stones from the riverbank.')
+        u.log_event('You gather some stones from the riverbank. (+%s Stone)' % r1)
+        r2 = randint(0, 10)
+        if r2 <= 3:
+            u.log_event('You find a piece of flint in the stone (+%s Flint)' % r2)
+            u.flint += 2
+            u.Find_Flint = True
         u.save()
     elif id == 'Find_Flint':
         r1 = randint(0, 3)
