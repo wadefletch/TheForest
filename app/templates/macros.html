@@ -16,6 +16,6 @@
 
 {% macro action(user, name) %}
 {% if user[name]==True %}
-<button class="ui button" id="#{{ name }}">{{ name|replace('_', ' ') }}</button>
+<button class="ui button" style="margin: 5px;" id="#{{ name }}">{{ name|replace('_', ' ') }}</button>
 {% endif %}
 {% endmacro %}
