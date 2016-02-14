@@ -3,7 +3,7 @@ from app import db
 
 class User(db.Document):
     id = db.StringField()
-    event_stream = db.StringField()
+    event_stream = db.ListField(db.StringField(), required=False, default=['You open your eyes in the woods, stunned.'])
 
     wood = db.IntField(required=False, default=0)
     stone = db.IntField(required=False, default=0)
@@ -23,4 +23,10 @@ class User(db.Document):
 
 
     def log_event(self, event):
-        self.event_stream = event + self.event_stream
+        self.event_stream = [event] + self.event_stream
+        self.save()
+
+    def unlock(self, action):
+        unlockable = getattr(self, action)
+        unlockable = True
+        self.save()

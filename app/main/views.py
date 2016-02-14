@@ -27,16 +27,26 @@ def index():
     return render_template('index.html', id=id, user=u)
 
 
+@main.route('/_actions')
+def _actions():
+    u = User.query.filter(User.id == request.cookies.get('user_id')).first_or_404()
+    return render_template('actions.html', user=u)
+
+
+@main.route('/_events')
+def _events():
+    u = User.query.filter(User.id == request.cookies.get('user_id')).first_or_404()
+    return render_template('events.html', events=u.event_stream)
+
 @main.route('/_inventory')
 def _inventory():
     u = User.query.filter(User.id == request.cookies.get('user_id')).first_or_404()
     return render_template('inventory.html', user=u)
 
 
-@main.route('/_actions')
-def _actions():
+@main.route('/_get_action/<id>')
+def _get_action(id):
     u = User.query.filter(User.id == request.cookies.get('user_id')).first_or_404()
-    u.event_stream = 'Test event' + u.event_stream
-    u.save()
-    print u.event_stream
-    return render_template('actions.html', user=u)
+    if id == 'Wander':
+        u.log_event('You wander into the woods.')
+    return ''

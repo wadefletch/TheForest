@@ -11,4 +11,4 @@ function update() {
 
 }
 
-var interval = self.setInterval(function(){update()},1000);
+var interval = self.setInterval(function(){update()},2000);
