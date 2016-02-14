@@ -4,8 +4,9 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 
 class Config:
+    APP_NAME = 'The Forest'
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'shh! it\'s a secret!'
-    COLOR = 'blue'
+    COLOR = 'green'
     NAME = 'The Forest'
     MONGOALCHEMY_DATABASE = 'heroku_d09c40b5'
     MONGOALCHEMY_CONNECTION_STRING = os.environ.get('MONGOLAB_URI')

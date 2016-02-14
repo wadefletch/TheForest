@@ -3,13 +3,11 @@
 <script>
     $('button').on('click', function () {
         $.get("/_get_action/"+this.id.substring(1), function(data) {
-            $("#inventory-frame" ).html(data);
         });
     });
 
 </script>
 
-{{ action(user, 'Wander') }}
 {{ action(user, 'Get_Wood') }}
 {{ action(user, 'Explore') }}
 {{ action(user, 'Find_Stone') }}

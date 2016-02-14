@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% from 'macros.html' import inventory_item, action %}
+
+{% block title %}Home{% endblock %}
+
+{% block head %}
+<script text="text/javascripts" src="{{ url_for('static', filename='play.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="ui horizontal segments">
+    <div id="actions" class="ui padded segment">
+        <h2 class="ui header">Actions</h2>
+        <div id="actions-frame"></div>
+    </div>
+    <div id="events" class="ui padded segment">
+        <h2 class="ui header">Events</h2>
+        <div id="events-frame"></div>
+    </div>
+    <div id="inventory" class="ui padded segment">
+        <h2 class="ui header">Inventory</h2>
+        <div id="inventory-frame"></div>
+    </div>
+</div>
+{% endblock %}

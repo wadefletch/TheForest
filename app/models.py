@@ -13,20 +13,13 @@ class User(db.Document):
     furs = db.IntField(required=False, default=0)
     knives = db.IntField(required=False, default=0)
 
-    Wander = db.BoolField(required=False, default=True)
-    Get_Wood = db.BoolField(required=False, default=False)
-    Explore = db.BoolField(required=False, default=False)
+    Explore = db.BoolField(required=False, default=True)
+    Get_Wood = db.BoolField(required=False, default=True)
     Find_Stone = db.BoolField(required=False, default=False)
     Find_Flint = db.BoolField(required=False, default=False)
     Start_Fire = db.BoolField(required=False, default=False)
     Harvest_Apples = db.BoolField(required=False, default=False)
 
-
     def log_event(self, event):
         self.event_stream = [event] + self.event_stream
-        self.save()
-
-    def unlock(self, action):
-        unlockable = getattr(self, action)
-        unlockable = True
         self.save()
