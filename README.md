@@ -1,8 +1,3 @@
 # Forest
 
-<<<<<<< Updated upstream
-test
-test
-=======
-test 2
->>>>>>> Stashed changes
+A simple game created in a 24 hour CodeDay event.
