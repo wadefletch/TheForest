@@ -10,7 +10,7 @@ Jinja2==2.8
 MarkupSafe==0.23
 MongoAlchemy==0.19
 pymongo==2.8.1
-python-engineio==0.8.7
+python-engineio==3.8.2.post1
 python-socketio==1.0
 six==1.10.0
 Werkzeug==0.11.3
